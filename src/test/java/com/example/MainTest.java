@@ -8,12 +8,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
 
+	String variable;
+
 	@BeforeEach
 	void setUp() {
+		variable = "Rosa";
 	}
 
 	@AfterEach
 	void tearDown() {
+		variable = null;
 	}
 
 	@Test
@@ -22,6 +26,7 @@ class MainTest {
 
 	@Test
 	void buscarPlanta() {
+		assertEquals(variable,  "Rosa");
 	}
 
 	@Test
